@@ -1,0 +1,28 @@
+li a{
+	color: #00ff00;
+}
+h2 {
+	color: #00ff00;
+}
+div {
+	border: 2px solid blue;
+	margin: 20px;
+}
+footer div{
+	border:none;
+
+}
+.navigation-buttons li{
+	float:left;
+	margin: 15px;
+	padding: 3px;
+	border: 2px solid brown;
+	background-color: #7D5E1C;
+}
+.footer{
+	clear:both;
+}
+.fans{
+	width: 80em;
+	height: 45em;
+}
