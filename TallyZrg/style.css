@@ -1,4 +1,4 @@
-nav{
+nav, header{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -9,6 +9,10 @@ nav{
 
 nav{
 	display: block;
+}
+
+header {
+	background-image: url(../images/12th-man.jpg);
 }
 
 nav {
