@@ -1,0 +1,41 @@
+    <title>Seahawks Merch</title> 
+  </head> 
+    <body> 
+      <header> 
+        <div> 
+          <h1>We are 12</h1> 
+            <input type="text"> 
+            <button>shopping cart</button> 
+        </div> 
+      </header> 
+      <nav> 
+        <ul> 
+          <li><a href="#">Mens</a></li> 
+          <li><a href="#">Womens</a></li> 
+          <li><a href="#">Kids</a></li> 
+          <li><a href="#">jerseys</a></li> 
+          <li><a href="#">t-shirts</a></li> 
+          <li><a href="#">accesories</a></li> 
+           
+        </ul> 
+      </nav> 
+      <section id="rotating banner"></seciont> 
+      <section id="shopping links" > 
+        <ul> 
+          <h3>Mens</h3> 
+          <li><img src="http://cdnb.lystit.com/photos/2013/12/06/nike-navy-mens-shortsleeve-seattle-seahawks-tshirt-product-1-15956629-617140032_large_flex.jpeg" height="42" width="42" title="BAM"></li> 
+          <h3>Ladies</h3> 
+          <li><img src="http://nflshop.frgimages.com/FFImage/thumb.aspx?i=%2FproductImages%2F_1192000%2Fff_1192517_xl.jpg&w=400"height="42" width="42"></li> 
+        </ul> 
+      </section> 
+             
+    <footer> 
+      <div> 
+        <h2>check out our fans!</h2> 
+      </div> 
+    </footer> 
+     
+    </body> 
+
+
+</html>
