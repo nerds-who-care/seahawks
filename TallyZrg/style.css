@@ -7,7 +7,7 @@ nav, header{
 	vertical-align: baseline;
 }
 
-nav{
+nav, header{
 	display: block;
 }
 
