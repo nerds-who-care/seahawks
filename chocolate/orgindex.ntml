@@ -1,4 +1,8 @@
-    <title>Seahawks Merch</title> 
+<!DOCTYPE html> 
+<html xmins="http://www.w3.org/1999/xhtml"> 
+  <head> 
+<link href="css/style.css" rel="stylesheet" />
+    <title>Seahawks Merch</title>  
   </head> 
     <body> 
       <header> 
@@ -23,7 +27,7 @@
       <section id="shopping links" > 
         <ul> 
           <h3>Mens</h3> 
-          <li><img src="http://cdnb.lystit.com/photos/2013/12/06/nike-navy-mens-shortsleeve-seattle-seahawks-tshirt-product-1-15956629-617140032_large_flex.jpeg" height="42" width="42" title="BAM"></li> 
+          <li><img src="http://cdnb.lystit.com/photos/2013/12/06/nike-navy-mens-shortsleeve-seattle-seahawks-tshirt-product-1-15956629-617140032_large_flex.jpeg" height="42" width="42" title="BAM!"></li> 
           <h3>Ladies</h3> 
           <li><img src="http://nflshop.frgimages.com/FFImage/thumb.aspx?i=%2FproductImages%2F_1192000%2Fff_1192517_xl.jpg&w=400"height="42" width="42"></li> 
         </ul> 
