@@ -1,0 +1,43 @@
+nav,header{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+nav,header{
+	display: block;
+}
+
+
+nav {
+    background-color: teal;
+    background-image: url("http://blog.seattlepi.com/football/files/2011/11/SeahawksFans1.jpg");
+    height: 60px;
+    text-align: center;
+}
+
+
+nav ul {
+    padding-top: 7px;
+}
+
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
