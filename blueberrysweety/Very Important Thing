@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<script> 
-	var i = 5;
-	while (i>0) {
-		alert(i);
-		i = i - l;
 	/*
+	var i = 5;
+	for (i = 5; i > 0; i--){
+		alert(i);
+	
 	if (i >= 5){
 		alert('its five!');
 		alert('this wil also show')
@@ -24,7 +24,7 @@
 	<h1> Most important page ever!</h1>
 	<p>Here are the awesome languages we are going to learn.</p>
    	<ul>
-		<li> HTML</li>
+		<li id='chrome'> HTML</li>
 		<li>CSS</li> 
 		<li>Javascript</li> 
 	</ul> 
