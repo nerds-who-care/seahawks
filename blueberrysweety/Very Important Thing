@@ -3,6 +3,7 @@
 <head>
 	<script> 
 	var i = 5;
+	/*
 	if (i >= 5){
 		alert('its five!');
 		alert('this wil also show')
@@ -13,6 +14,7 @@
 		alert('not five');
 		}
 	alert(i);
+	*/
 	</script>    
 </head>
 <body>
