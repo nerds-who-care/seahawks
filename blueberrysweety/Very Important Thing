@@ -3,6 +3,9 @@
 <head>
 	<script> 
 	var i = 5;
+	while (i>0) {
+		alert(i);
+		i = i - l;
 	/*
 	if (i >= 5){
 		alert('its five!');
