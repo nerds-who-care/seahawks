@@ -1,0 +1,21 @@
+<!Doctype html>
+<html>
+	<head>
+		<script>
+			var i = 5;
+			while (i >0) {
+				alert(i);
+				i = i - 1;
+			}
+		</script>
+	</head>
+	<body> 
+		<h1> The Most Important Page Ever!</h1>
+		<p>Here are the awesome languages we are going to learn.</p>
+		<ul>
+			<li>HTML</li>
+			<li id='css'> CSS</li>
+			<li>Javascript</li>
+		</ul>
+	</body>
+</html>
