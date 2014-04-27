@@ -24,7 +24,7 @@ header {
 	text-align: center;
 }
 
-header #shopping-cart {
+.shopping-cart {
 	position: absolute;
 	right: 10px;
 	top: 10px;
