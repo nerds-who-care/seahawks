@@ -1,3 +1,35 @@
+header {
+	/*image*/
+	background-image: url("https://raw.githubusercontent.com/nerds-who-care/seahawks/master/images/12th-man.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	/*Position*/
+	position: relative;
+	height: 80px;
+}
+
+.centerblock {
+	/*Position*/
+	position: relative;
+	padding:; 50px 0px 0px 20px;
+	margin: 0px 0px 0px 0px;
+	display: block;
+
+	/*Font*/
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: Calibri, Arial;
+	text-align: center;
+}
+
+header #shopping-cart {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
 nav{
 	margin: 0;
 	padding: 0;
