@@ -1,0 +1,25 @@
+using System;
+					
+public class Program
+{
+	public static void Main(string[] args)
+	{
+		 {
+            int cat = 1;
+			int num = 5;
+
+           do
+			   
+			{
+    Console.WriteLine(cat);
+   	cat = cat + 1;
+			
+		   } while(cat < 6);
+			 
+			 { 
+	Console.WriteLine(num);
+	num = num - 1;
+			 }while(num > 1);
+       	 }
+    }
+}
