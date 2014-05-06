@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function swapColors(elementname, color, textcolor) {
+				var js =document.getElementById("js");
+				js.style.backgroundColor = color;
+				js.style.color = textcolor;
+				
+			}
+			function copyText(textField, target)
+				var textfield = document.getElementById(textField);
+				var target = document.getElementById(target);
+				target.innerHTML = textField.value;
+
+				if (text.indexof)
+			</script>
+		<style>
+			
+		</style>
+	</head>
+<body>
+
+    <h1>Most important page ever!</h1>
+    <p>Here are the awesome languages we are going to learn.</p>
+    <ul>
+      <li id="html">HTML</li>
+      <li id="css">CSS</li>
+      <li id="js">Javascript</li>
+  </ul>
+  	<p><input type='button' value='Click Me' onclick='swapColors("js","red", "blue");'/>
+  	<input type='button' value='Then, Click Me!' onclick='swapColors("js","blue", "red");'/></p>
+  	<p>
+  		<input type="text" id="text" onchange='alert("hello")' /> <br>
+  		<input type='button' value='Enter' onclick="alert('hello')"/>
+  	</P>
+  	<p id="p"/>
+</body>
+</html>
