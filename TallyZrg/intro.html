@@ -1,27 +1,16 @@
 <html>
     <head>
         <script>
-        /*
-          for (i = 5; i > 0; i++) {
-            	alert(i);
-            }*/
-          /*
-          var i = 5;*/
-          /*
-          while (i > 0) {
-            alert(i);
-              i = i - 1;
-          }*/
-          /*
-	  if (i >= 5) {
-	    alert('it\'s five!');
-	    alert('this will also show');
-	    alert('this too');
-	    alert('too many alerts');
-	  }
-	  else {
-	    alert('not five');
-	  }*/
+            function swapColors(elementName, color, textColor) {
+              var js = document.getElementById("js");
+              js.style.backgroundColor = color;
+              js.style.color = textColor;
+            }
+            function copyText(textField, target) {
+              var textField = document.getElementById(textField);
+              var target = document.getElementById(target);
+              target.innerHTML = textField.value;
+            }
         </script>
     </head>
     <body>
@@ -32,5 +21,13 @@
         <li id='css'>CSS</li>
         <li id='js'>Javascript</li>
       </ul>
+      <p>
+        <input type='button' value='Red!' onclick='swapColors("js", "red", "black");'/>
+        <input type='button' value='Blue!' onclick='swapColors("js", "blue", "white");'/>
+      </p>
+      <p>
+        <input type="text" id="text" onkeyup="copyText('text', 'p');"/>
+      </p>
+        <p id="p"/>
     </body>
 </html>
