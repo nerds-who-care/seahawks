@@ -1,16 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/master.css">
-</head>
-<body>
-	<h1>Most important page ever!</h1>
-	<p> Here are the awesome languages we are going to learn.</p>
-	<ul>
-	   <li>HTML</li>
-	   <li>CSS</li>
-	   <li>Javascript</li>
-	</ul>
-</body>
-</html> 
+<!DOCTYPE html> 
+<html> 
+<head> 
+<script> 
+function swapColors(elementName, color, textColor) { 
+var js = document.getElementById(elementName); 
+js.style.backgroundColor = color; 
+js.style.color = textColor; 
+} 
+function copyText(textField, target) { 
+var textField = document.getElementById(textField); 
+var target = document.getElementById(target); 
+target.innerHTML = textField.value; 
+} 
+ 
+ 
+} 
+ 
+ 
+</script> 
+</head> 
+<body> 
+    <h1>Most important page ever!</h1> 
+    <p>Here are the awesome languages we are going to learn.</p> 
+    <ul> 
+      <li id='html'>HTML</li> 
+      <li id= 'css'>CSS</li> 
+      <li id='js'>Javascript</li> 
+  </ul> 
+  <p><input type='button' value='Red' onclick=' swapColors("js", red", "black");'/> 
+  <input type='button' value='Blue' onclick=' swapColors("js", blue", "white");'/> 
+  </p> 
+  <p> 
+  <input type="text" id="text" onkeyup="copyText('text', 'p')";/> 
+  </p> 
+  <p id="p"/> 
+</body> 
+</html>
