@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="scripts/helper.js"></script>
+    <title>Seahawks Merch</title>
+	<link rel="icon" href="http://www.w3schools.com/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>We are 12</h1>
+            <div id="search">
+                <input type="text" />
+                <button id="shopping-cart">shopping cart</button>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Mens</a></li>
+            <li><a href="#">Ladies</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Jerseys</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">T-shirts</a></li>
+            <li><a href="#">Sweatshirts</a></li>
+            <li><a href="#">Hats</a></li>
+        </ul>
+    </nav>
+    <section id="rotating-banner">
+
+    </section>
+    <section id="shopping-links">
+        <ul>
+            <li>
+                <img src="images/jerseys.jpg" />
+                <h3>Shop Mens</h3>
+            </li>
+            <li>
+                <img src="images/jerseys.jpg" />
+                <h3>Shop Ladies</h3>
+            </li>
+            <li>
+                <img src="images/jerseys.jpg" />
+                <h3>Shop Kids</h3>
+            </li>
+            <li>
+                <img src="images/jerseys.jpg" />
+                <h3>Shop Jerseys</h3>
+            </li>
+            <li>
+                <img src="images/jerseys.jpg" />
+                <h3>Shop Accessories</h3>
+            </li>
+            <li>
+                <img src="images/jerseys.jpg" />
+                <h3>Shop T-shirts</h3>
+            </li>
+            <li>
+                <img src="images/jerseys.jpg" />
+                <h3>Shop Sweatshirts</h3>
+            </li>
+            <li>
+                <img src="images/jerseys.jpg" />
+                <h3>Shop Hats</h3>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <div id="fans">
+            <h2>Check out our fans!</h2>
+            <ul>
+                <li>
+                    <img src="images/jerseys.jpg" />
+                </li>
+                <li>
+                    <img src="images/jerseys.jpg" />
+                </li>
+                <li>
+                    <img src="images/jerseys.jpg" />
+                </li>
+                <li>
+                    <img src="images/jerseys.jpg" />
+                </li>
+                <li>
+                    <img src="images/jerseys.jpg" />
+                </li>
+                <li>
+                    <img src="images/jerseys.jpg" />
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
