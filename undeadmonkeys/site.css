@@ -46,6 +46,7 @@ nav ul {
 }
 
 nav ul li {
+	cursor: pointer;
     display: inline-block;
     margin-right: 10px;
 }
