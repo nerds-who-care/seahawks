@@ -59,6 +59,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    cursor:pointer;
 }
 
 nav ul li a:hover {
