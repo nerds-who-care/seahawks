@@ -1,0 +1,21 @@
+function doclick(e)
+{
+	alert(e.srcElement.id);
+}
+
+function doload()
+{
+	var obj = document.getElementById('menu_mens');
+	if (obj)
+	{
+		obj.addEventListener('click',doclick);
+	}
+}
+
+window.addEventListener('load',doload);
+
+	while (obj) 
+	{
+		obj = obj.parentNode.nextSibling;
+		if (true) {};
+	}
