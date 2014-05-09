@@ -1,0 +1,75 @@
+body {
+margin: 0 ;
+}
+
+header {
+/*image*/
+background-image: url("https://raw.githubusercontent.com/nerds-who-care/seahawks/master/images/12th-man.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+ 
+/*image position*/
+background-position: top-center;
+height: 80px;
+}
+.centerblock { 
+/*font*/
+color: white;
+font-size: 15px;
+font-weight:bold;
+font-family: Calibri, Arial;
+text-align: center;
+ 
+/*text position*/
+position: relative;
+margin: 0px 0px 0px 0px;
+padding: 50px 0px 0px 0px
+display: block;
+ 
+}
+
+.shopping-cart { 
+position: absolute;
+right: 10px;
+top: 10px;
+ 
+}
+
+nav{
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+
+nav{
+display: block;
+}
+
+nav {
+    background-color: black;
+    height: 30px;
+    text-align: center;
+}
+
+nav ul {
+    padding-top: 7px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}​
