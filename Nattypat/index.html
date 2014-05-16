@@ -2,28 +2,46 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Seahawks Merch</title>
-    <link rel="stylesheet" type="text/css" href="css/site.css" />
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="jquery.js"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
-        <div>
             <div class="centerblock">We are 12</div>
             <div id="shopping-cart">
                 <input type="text" />
                 <button>shopping cart</button>
             </div>
-        </div>
     </header>
 	<nav>
 	<ul>
-		<li><a href="#">Mens</a></li>
-		<li><a href="#">Womens</a></li>
-		<li><a href="#">Kids</a></li>
-		<li><a href="#">Jerseys</a></li>
-		<li><a href="#">Accesseries</a></li>
-		<li><a href="#">T-Shirts</a></li>
-		<li><a href="#">Sweatshirts</a></li>
-		<li><a href="#">Hats</a></li>
+		<li>
+			<a id="menu_mens" href="#">Mens</a>
+		</li>
+		<li>
+			<a id="menu_womens" href="#">Womens</a>
+		</li>
+		<li>
+			<a id="menu_kids" href="#">Kids</a>
+		</li>
+		<li>
+			<a id="menu_jerseys" href="#">Jerseys</a>
+		</li>
+		<li>
+			<a id="menu_accessories" href="#">Accessories</a>
+		</li>
+		<li>
+			<a id="menu_tshirts" href="#">T-Shirts</a>
+		</li>
+		<li>
+			<a id="menu_sweatshirts" href="#">Sweatshirts</a>
+		</li>
+		<li>
+			<a id="menu_hats" href="#">Hats</a>
+		</li>
 	</ul>
 	</nav>
 	 <section>
@@ -45,7 +63,6 @@
 	<footer>
 		<div>
 		    <h2>Check out our fans!</h2>
-            <img src="https://raw.githubusercontent.com/nerds-who-care/seahawks/master/images/12th-man.jpg" />
 		</div>
 	</footer>
 </body>
