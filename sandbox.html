@@ -4,8 +4,10 @@
 <head>
     <title>Sandbox page</title>
     <script src="jquery.js"></script>
+    <script src="script.js"></script>
     <style>
     	h2 {color: blue;}
+    	label {width: 150px; display: inline-block;}
     </style>
 </head>
 <body>
@@ -25,6 +27,7 @@
 		<li>Aquaman</li>
 	</ul>
 	<h2>Useless form!</h2>
+	<form id="myForm">
 	<label for="firstName">First Name</label>
 	<input type="text" name="firstName" id="firstName"></input><br/>
 
@@ -36,7 +39,7 @@
 
 	<label for="city">City</label>
 	<input type="text" name="city" id="city"></input><br/>
-	<select>
+	<select id="bop_it_select">
 		<option value="defuault">Choose Something!</option>
 		<option value="bopIt">Bop It!</option>
 		<option value="spinIt">Spin It!</option>
@@ -48,7 +51,15 @@
 	</select><br/>
 	<label for="saveData">Save my Data</label>
 	<input type="checkbox" id="saveData" name="SaveData"/>
-	<input type="submit" id="submit" value="Save it!"></input>
+	<input type="button" id="submit" value="Save it!"></input>
+	</form>
+
+	<p>.</p>
+	<p>.</p>
+	<p>.</p>
+	<p>.</p>
+	<p>.</p>
+	<p>.</p>
 	<section>
 		
 	</section>

@@ -3,31 +3,71 @@ function doclick(e) {
     alert(e.srcElement.id);
 }
 
-// function doload() {
-//    var obj = document.getElementById('menu_mens');
-//    if (obj) {
-//         obj.addEventListener('click', doclick);
-        
-//         while (obj) {
-//             obj = obj.parentNode.nextSibling;
-//             if (obj) {
-//                 if (!obj.id) obj = obj.nextSibling;
-//                 if (obj) {
-//                     obj = obj.firstChild;
-//                     if (!obj.id) obj = obj.nextSibling;
-//                     obj.addEventListener('click', doclick);
-//                 }                
-//             }
-//         }
-        
-//    }
-// }
-
-
-// window.addEventListener('load', doload);
+function test()
+{
+	$('#firstName').val('spongebob');
+}
 
 $(document).ready(function(){
-    $('#shopping-cart').hide();
 
-    var siblings = $('#menu_mens').siblings();
+	
+	
+
+	$('#submit').click(function(){
+		var firstName = $('#firstName').val();
+		var lastName = $('#lastName').val();
+		var address = $('#address').val();
+		var bop_it_choice = $('#bop_it_select option:selected').val();
+		var save_my_data = $('#saveData').prop('checked');
+		console.log(bop_it_choice);
+		console.log(save_my_data);
+
+		var sendData = {
+			"fName" : firstName,
+			"lName" : lastName,
+			"addr" : address,
+			"bChoice" : bop_it_choice,
+			"sData" : save_my_data
+		}
+
+		//TODO: Validate this stuff!
+
+		$.ajax({
+			url: "someUrl.aspx",
+			data: sendData,
+			type: 'POST',
+			success: function(data) {
+				alert('sweet success!');
+			},
+			error: function() {
+				alert('epic fail!');
+			}
+		})
+
+		//some other code
+	})
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
