@@ -4,6 +4,15 @@
 body {
     margin:0px;
 }
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 header {
 position:relative;
 background-image: url(https://raw.githubusercontent.com/nerds-who-care/seahawks/master/images/12th-man.jpg);
@@ -60,12 +69,38 @@ nav ul li {
 
 nav ul li a {
     color: white;
-    text-decoration: none;
     cursor:pointer;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+#shopping-links {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+#shopping-links ul li img {
+    max-width: 160px;
+    max-height: 160px;
+}
+
+#shopping-links ul{
+    list-style-type: none;
+}
+
+#shopping-links ul li {
+    display: inline-block;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
