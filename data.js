@@ -1,7 +1,7 @@
 var inventory = [
     {
         "category": "Mens",
-        "top-level-image": "http://profootballzone.com/wp-content/uploads/2014/03/russell-wilson2.png",
+        "top_level_image": "http://profootballzone.com/wp-content/uploads/2014/03/russell-wilson2.png",
         "products": [
             {
                 "name": "sports jersey",
@@ -17,7 +17,7 @@ var inventory = [
     },
     {
         "category": "Womens",
-        "top-level-image": "http://www.seahawksprostoreonline.com/849-thickbox/Womens_Nike_Seattle_Seahawks_3_Russell_Wilson_Game_Pink_2012_Fem_Fan_Jersey.jpg",
+        "top_level_image": "http://www.seahawksprostoreonline.com/849-thickbox/Womens_Nike_Seattle_Seahawks_3_Russell_Wilson_Game_Pink_2012_Fem_Fan_Jersey.jpg",
         "products": [
             {
                 "name": "sports jersey",
@@ -38,7 +38,7 @@ var inventory = [
     },
     {
         "category": "Kids",
-        "top-level-image": "http://queenbeecoupons.com/wp-content/upload/2013/11/Seattle-Seahawksreplica-Helmet-jersey.jpg",
+        "top_level_image": "http://queenbeecoupons.com/wp-content/upload/2013/11/Seattle-Seahawksreplica-Helmet-jersey.jpg",
         "products": [
             {
                 "name": "Replica Helmet and Jersey",
@@ -59,7 +59,7 @@ var inventory = [
     },
     {
         "category": "Jerseys",
-        "top-level-image": "http://www.bbestmall.com/pimages/20131231409124952.jpg",
+        "top_level_image": "http://www.bbestmall.com/pimages/20131231409124952.jpg",
         "products": [
             {
                 "name": "Personalized",
@@ -80,7 +80,7 @@ var inventory = [
     },
     {
         "category": "Accessories",
-        "top-level-image": "http://www.nflstore.net/wp-content/uploads/2013/11/NFL-Seattle-Seahawks-Thematic-Mascot-Dangle-Hat-0.jpg",
+        "top_level_image": "http://www.nflstore.net/wp-content/uploads/2013/11/NFL-Seattle-Seahawks-Thematic-Mascot-Dangle-Hat-0.jpg",
         "products": [
             {
                 "name": "Bracelet",
@@ -101,7 +101,7 @@ var inventory = [
     },
     {
         "category": "T-Shirts",
-        "top-level-image": "https://img1.etsystatic.com/021/1/7588251/il_340x270.537079209_q43d.jpg",
+        "top_level_image": "https://img1.etsystatic.com/021/1/7588251/il_340x270.537079209_q43d.jpg",
         "products": [
             {
                 "name": "Wings",
@@ -122,7 +122,7 @@ var inventory = [
     },
     {
         "category": "Sweatshirts",
-        "top-level-image": "http://images.footballfanatics.com/FFImage/thumb.aspx?i=/productImages/_1162000/ff_1162850_xl.jpg&w=180",
+        "top_level_image": "http://images.footballfanatics.com/FFImage/thumb.aspx?i=/productImages/_1162000/ff_1162850_xl.jpg&w=180",
         "products": [
             {
                 "name": "Green",
@@ -143,7 +143,7 @@ var inventory = [
     },
     {
         "category": "Hats",
-        "top-level-image": "http://www.clothingtodoor.com/pic/201391318523989423.jpg",
+        "top_level_image": "http://www.clothingtodoor.com/pic/201391318523989423.jpg",
         "products": [
             {
                 "name": "Tuff",
