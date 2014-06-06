@@ -1,8 +1,14 @@
 /*https://raw.githubusercontent.com/nerds-who-care/seahawks/master/images/jerseys.jpg*/
 /*https://raw.githubusercontent.com/nerds-who-care/seahawks/master/images/12th-man.jpg*/
 
+html {
+    position:relative;
+}
+
 body {
     margin:0px;
+    position:relative;
+    font-family: Calibri, Arial;
 }
 
 a {
@@ -92,8 +98,43 @@ nav ul li a {
     text-align: center;
 }
 
+#category-products {
+    display: none;
+    position: fixed;
+    margin: 20% 30%;
+    background-color: #fff;
+    border: solid 5px #2E3751;
+    border-radius: 10px;
+    min-height: 200px;
+    min-width: 200px;
+    padding: 25px;
+    padding-bottom:15px;
+    top: 0px;
+}
 
+#category-products div {
+    white-space:nowrap;
+}
 
+#category-products .productimg {
+    width:80px;
+    vertical-align:middle;
+    margin-right:15px;
+    margin-bottom:10px;
+}
+
+.closex {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: solid 2px #2E3751;
+    border-radius: 5px;
+    padding: 3px;
+    font-family: Verdana;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+}
 
 
 

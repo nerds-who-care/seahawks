@@ -26,13 +26,15 @@ function getCategories(){
 }
 
 function displayShoppingLinks(){
-    var template = '<li><a href="#"><img src="{image_path}" /></a><h3><a href="#">Shop {category}</a></h3></li>';
+    var template = '<li><a href="javascript:displayProducts({key});"><img src="{image_path}" /></a><h3><a href="javascript:displayProducts({key});">Shop {category}</a></h3></li>';
     var myHtml = '<ul>';
     $.each(inventory, function(key, value){
         var category = value.category;
         var image_path = value.top_level_image;
+        var product_list = value.products;
         var temp = template.replace(/{category}/g, category);
         temp = temp.replace(/{image_path}/g, image_path);
+        temp = temp.replace(/{key}/g, key);
         myHtml += temp;
     });
     myHtml += "</ul>";
@@ -49,8 +51,24 @@ function displayMenu(categories){
 	$('#menu').html(myHtml);
 }
 
-function displayProducts(products){
-	var template = '<li><img src="{imagePath}"><h3>Shop {category}</h3></li>';
+function displayProducts(key){
+    var category = inventory[key];
+	var template = '<div><img class="productimg" src="{imagePath}">{name} ${price}</div>';
+    var myHtml = '';
+    $.each(category.products, function(key, value) {
+        var temp = template.replace(/{imagePath}/g, value.image);
+        temp = temp.replace(/{name}/g, value.name);
+        temp = temp.replace(/{price}/g, value.price.toFixed(2));
+        myHtml += temp;
+    });
+    var closex = '<div id="close-products" class="closex">X</div>';
+    $('#category-products').html(myHtml + closex);
+    $('#category-products').css("display","block");
+    $('#close-products').on("click", function() { $('#category-products').css("display","none");});
+    // if you take away the comments here you will get the full size image 
+    // when you mouse over the image in the products list
+    // $('.productimg').on("mouseover", function() { this.style.width = 'auto'; });
+    // $('.productimg').on("mouseout", function() { this.style.width = '80px'; });
 }
 
 $(document).ready(function(){
