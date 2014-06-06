@@ -1,0 +1,144 @@
+body{
+    background: url(http://www.noupe.com/wp-content/uploads/2009/10/the-forgotten-gate.jpg),url(images/the-forgotten-gate.jpg);
+    background-position:center center;
+    background-attachment:fixed;
+    }
+p{
+    font-size:1em;
+    }
+a{
+    color: yellow;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+li{
+    font-size: 1.3em;
+    list-style: none;
+    color:#ffa500;
+    margin-bottom:.6em; 
+    margin-right: .5em;
+}
+h2{
+    text-align: center;
+    color: gray;
+}
+li:hover{
+    color:red;
+    }
+input{
+    float: right;
+    margin-top: 2em;
+}
+button{
+    float:right;
+    margin-top:2em;
+}
+.tittle{
+    width: 80em;
+    height:auto;
+    border:none;
+    margin-top: 2em;
+    margin:auto;
+    }
+.tittle h1{
+    color:#cc0524;
+    text-align:center;
+    font-size: 5em;
+    }
+.links{
+    background-image: url();
+    border: none;
+    color: white;
+    text-align: center;
+    height:6em;
+    width: 75em;
+    margin:0 auto;
+    margin-bottom: 2em;
+    }
+.links h3{
+    text-transform: capitalize;
+    background-color: black;
+    display:inline-block;
+    cursor: pointer;
+    width: 1em;
+    border:2px solid gray;
+    margin:0 auto;
+    margin-top: 1em;
+    margin-left: 1em;
+    }
+.page-content{
+    width: 80em;
+    padding-bottom: 1em;
+    height: auto;
+    border: none;
+    margin: 0 auto;
+    /*background-image: url(http://static.zerochan.net/Steins%3BGate.full.742594.jpg);*/
+    /*background-image: url(http://images3.alphacoders.com/373/37305.jpg), url(images/ergo_proxy.jpg);
+    
+    background-image: url(http://www.kartino4ka.net/_ph/79/208274968.jpg);*/
+    background-image: url(http://funlava.com/wp-content/uploads/2013/03/cool-background-in-prince-of-persia_1024x768.jpg);
+    background-size: auto 100%;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    text-transform:capitalize;
+    }
+.page-content div{
+    border-radius: 1em;
+}
+.left-bar{
+    background-image: url(http://turbo.premiumpixels.com/wp-content/uploads/2010/11/lead-214.jpg),url(images/lead.jpg);
+    background-position:center center;
+    background-attachment:none;
+    opacity: .8;
+    margin-left: .5em;
+    width:15em;
+    height:100em;
+    float: left;
+    }
+.right-bar{
+    background-image: url(http://turbo.premiumpixels.com/wp-content/uploads/2010/11/lead-214.jpg),url(images/lead.jpg);
+    background-position:center center;
+    background-attachment:none;
+    opacity: .8;
+    margin-right:.5em;
+    width:15em;
+    height:100em;
+    float: right;
+    }
+.center-area{
+    background-image: url(http://turbo.premiumpixels.com/wp-content/uploads/2010/11/lead-214.jpg),url(images/lead.jpg);
+    background-position:center center;
+    background-attachment:none;
+    opacity:.8;
+    width:48em;
+    margin: 0 auto;
+    margin-bottom: .5em;
+    height:390em;
+    }
+.center-area-left{
+    height: auto;
+    width: 24em;
+    float: left;
+    }
+.center-area-right{
+    float: right;
+    height: auto;
+    width: 24em;
+    }
+.center-area h1{
+    margin:.2em;
+    border:2px solid green;
+    width: 7.5em;
+    font-size:3em;
+    color:green;
+    font-family:verdana;
+    }
+.footer {
+    height: 5em;
+    clear:both;
+    text-align:center;
+    background-color:gray;
+    }
