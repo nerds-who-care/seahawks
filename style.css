@@ -8,9 +8,18 @@ html {
 body {
     margin:0px;
     position:relative;
-    font-family: Calibri, Arial;
+    font-family: 'Josefin Sans', sans-serif;
+    /*font-family: Calibri, Arial;*/
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Amatic SC', cursive;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 80px
+}
 a {
     text-decoration: none;
 }
@@ -31,11 +40,7 @@ height:80px;
     display: block;
     text-align:center;
     color: white;
-    font-size:30px;
-    font-weight:bold;
-    font-family: Calibri, Arial;
     margin: 0px;
-    padding: 40px 0px 0px 0px;
 }
 header #shopping-cart {
     position:absolute;
