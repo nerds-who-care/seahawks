@@ -17,9 +17,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 48px;
-    line-height: 80px
+    font-size: 59px;
+    line-height: 70px;
 }
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
 a {
     text-decoration: none;
 }
@@ -39,7 +48,7 @@ height:80px;
     position:relative;
     display: block;
     text-align:center;
-    color: white;
+
     margin: 0px;
 }
 header #shopping-cart {
@@ -53,7 +62,6 @@ nav{
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 
@@ -141,8 +149,21 @@ nav ul li a {
     font-weight: bold;
 }
 
+#fans {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+#fans img {
+    max-width: 200px;
+    max-height: 200px;
+    margin-right: 5px;
+}
 
+footer {
+    margin-bottom: 40px;
+}
 
 
 

@@ -1,3 +1,35 @@
+function jsonFlickrFeed(data)
+{
+    var htmlBlob = "";
+
+    $.each( data.items, function (index, value) {
+        var image = value.media.m;
+        var tag = value.tags;
+        //console.log('image: ' + image);
+        //console.log('tag: ' + tag);
+        htmlBlob += '<img title="' + tag + '"src="' + image + '"/>';
+    });
+    
+    $('#fans').html(htmlBlob);
+}
+
+function ajaxGet(url)
+{
+    $.ajax({
+        type: 'GET',
+        url: url,
+        contentType: 'application/json',
+        dataType: 'jsonp',
+        jsonp: 'jsonFlickrFeed',
+    });
+}
+
+function flickrSearch(searchTerm)
+{
+    var url = "http://api.flickr.com/services/feeds/photos_public.gne?tagmode=any&format=json&tags=" + searchTerm;
+    ajaxGet(url);
+}
+
 function getCategoriesAndProducts(){
     $.each(inventory, function(key, value){
         var category = value.category;
@@ -71,11 +103,22 @@ function displayProducts(key){
     // $('.productimg').on("mouseout", function() { this.style.width = '80px'; });
 }
 
+function addToShoppingCart(item){}
+
+
 $(document).ready(function(){
 	var categories = getCategories();
 	displayMenu(categories);
     displayShoppingLinks();
-	//getCategoriesAndProducts();
+	flickrSearch('seahawks fans');
+
+
+    //TODO!  Can't get cookies to save!
+    $.cookie('s', 'stuff');
+    var saved = $.cookie('s');
+    console.log(saved);
+
+
 })
 
 
