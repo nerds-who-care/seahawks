@@ -1,5 +1,3 @@
-var shoppingCart = [];
-
 var inventory = [
     {
         "category": "Mens",

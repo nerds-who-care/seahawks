@@ -51,7 +51,7 @@ function getCategories(){
     $.each(inventory, function(key, value){
         var category = value.category;
         var products = value.products;
-        console.log('category: ' + category);
+        //console.log('category: ' + category);
         categories.push(category);
     })
     return categories;
@@ -103,22 +103,98 @@ function displayProducts(key){
     // $('.productimg').on("mouseout", function() { this.style.width = '80px'; });
 }
 
-function addToShoppingCart(item){}
+function displayProductsDrillIn(key){
+    //Let's modify or re-write displayProducts to fit with the following features.
+    //IMHO: I think it needs to be populated like this:  $('#shopping-links').html(myHtml);
+
+    //grab product node that matches key
+
+    //iterate through each item within the targeted product node
+    //generate HTML for the following:
+        //product title
+        //image
+        //controlls for how many are left in inventory
+        //button to add number selected to shopping cart
+
+}
+
+function getProduct(targetCategory, targetName){
+    //TODO: This loop doesn't exit properly when it finds the product.
+    $.each(inventory, function(key, value){
+        var category = value.category;
+        var products = value.products;
+        if (category == targetCategory)
+        {
+            $.each(value.products, function(key, product){
+                if (product.name == targetName){
+                    var name = product.name;
+                    return product;
+                }
+            })
+        }
+    })
+    //error, we didn't find product!
+}
+
+function getShoppingCart(){
+    var jsonCart = JSON.parse(localStorage.getItem('shoppingCart'));
+    return jsonCart;
+}
+
+function setShoppingCart(cart){
+    //commit the shopping cart to HTML 5's localStorage 
+    //was done with cookies in the old days
+    //localStorage cannot hold anything other than strings.  So we have to stringify
+    localStorage.setItem('shoppingCart', JSON.stringify(cart));
+}
+
+function initShoppingCart() {
+    //create empty shopping cart object
+    var shoppingCart = [];
+
+    //shoppingCart.push({'product': 'hat'});
+
+    setShoppingCart(shoppingCart);
+
+    //commit the shopping cart to HTML 5's localStorage 
+    //was done with cookies in the old days
+    //localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
+}
+
+function addToShoppingCart(item){
+    //get shopping cart from localstorage
+    var shoppingCart = getShoppingCart();
+
+    //add to shopping cart
+    shoppingCart.push(item);
+
+    //save shopping cart to localStorage
+    setShoppingCart(shoppingCart);
+
+    //remove item quantity from inventory
+
+}
+
+
 
 
 $(document).ready(function(){
+    initShoppingCart();
 	var categories = getCategories();
 	displayMenu(categories);
     displayShoppingLinks();
 	flickrSearch('seahawks fans');
 
+    //var product = {'product': 'hat'};
+    var product = getProduct('Mens', 'sports jersey');
+    addToShoppingCart(product);
 
-    //TODO!  Can't get cookies to save!
-    $.cookie('s', 'stuff');
-    var saved = $.cookie('s');
-    console.log(saved);
+    var shoppingCart = getShoppingCart();
+    console.log(shoppingCart[0].product);
 
-
+    // localStorage.setItem('s', 'blah2');
+    // var item = localStorage.getItem('s');
+    // console.log(item);
 })
 
 
