@@ -1,15 +1,32 @@
 /*https://raw.githubusercontent.com/nerds-who-care/seahawks/master/images/jerseys.jpg*/
 /*https://raw.githubusercontent.com/nerds-who-care/seahawks/master/images/12th-man.jpg*/
 
-body {
-    margin:0px;
+html {
+    position:relative;
 }
 
-a {
-	text-decoration: none;
+body {
+    margin:0px;
+    position:relative;
+    font-family: 'Josefin Sans', sans-serif;
+    /*font-family: Calibri, Arial;*/
 }
-a:hover{
-	text-decoration: underline;
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Amatic SC', cursive;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 80px
+}
+a {
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 header {
@@ -17,18 +34,14 @@ position:relative;
 background-image: url(https://raw.githubusercontent.com/nerds-who-care/seahawks/master/images/12th-man.jpg);
 background-repeat: no-repeat;
 background-size:cover;
+color: white;
 height:80px;
 }
 .centerblock {
     position:relative;
     display: block;
     text-align:center;
-    color: white;
-    font-size:30px;
-    font-weight:bold;
-    font-family: Calibri, Arial;
     margin: 0px;
-    padding: 40px 0px 0px 0px;
 }
 header #shopping-cart {
     position:absolute;
@@ -37,16 +50,16 @@ header #shopping-cart {
 }
 
 nav{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 nav{
-	display: block;
+    display: block;
 }
 
 nav {
@@ -72,22 +85,84 @@ nav ul li a {
 }
 
 #shopping-links {
-	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-#shopping-links ul{
-	list-style: none;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #shopping-links ul li img {
-	max-width: 160px;
-	max-height: 160px;
+    max-width: 160px;
+    max-height: 160px;
 }
 
-#shopping-links ul li{
-	display: inline-block;
-	list-style: none;
-	text-align: center;
+#shopping-links ul{
+    list-style-type: none;
 }
+
+#shopping-links ul li {
+    display: inline-block;
+    text-align: center;
+}
+
+#category-products {
+    display: none;
+    position: fixed;
+    margin: 20% 30%;
+    background-color: #fff;
+    border: solid 5px #2E3751;
+    border-radius: 10px;
+    min-height: 200px;
+    min-width: 200px;
+    padding: 25px;
+    padding-bottom:15px;
+    top: 0px;
+    z-index: 10;
+}
+
+#category-products div {
+    white-space:nowrap;
+}
+
+#category-products .productimg {
+    width:80px;
+    vertical-align:middle;
+    margin-right:15px;
+    margin-bottom:10px;
+}
+
+.closex {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: solid 2px #2E3751;
+    border-radius: 5px;
+    padding: 3px;
+    font-family: Verdana;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+#fans{
+    margin-left: auto;
+    margin-right: auto;
+    width:70%;
+}
+
+#fans img {
+    max-width: 200px;
+    max-height: 200px;
+    margin-right: 5px;
+}
+
+footer {
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
