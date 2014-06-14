@@ -12,10 +12,10 @@
 </head>
 <body>
     <header>
-            <h1 class="centerblock">We are 12</h1>
+            <h1 class="centerblock"><a href="index.html" class="white">We are 12</a></h1>
             <div id="shopping-cart">
                 <input type="text" />
-                <button>shopping cart<dbutton>
+                <a href="cart.html" class="button">shopping cart<a>
             </div>
     </header>
 	<nav>
@@ -37,4 +37,35 @@
 		</div>
 	</footer>
 </body>
+<script>
+$(document).ready(function(){
+    
+
+
+
+    var categories = getCategories();
+    displayMenu(categories);
+    flickrSearch('seahawks fans');
+    var requestedCategory = getURLParametersByKey('category');
+    if (requestedCategory == null || requestedCategory == '')
+    {
+       displayShoppingLinks();
+    }
+    else
+    {
+        displayProductsByCategory(requestedCategory);
+    }
+    
+
+    //var shoppingCart = getShoppingCart();
+    //console.log(shoppingCart[0].name);
+
+    // localStorage.setItem('s', 'blah2');
+    // var item = localStorage.getItem('s');
+    // console.log(item);
+})
+
+
+</script>
 </html>
+

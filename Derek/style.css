@@ -26,15 +26,23 @@ h2 {
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 22px;
 }
 
 a {
     text-decoration: none;
 }
 
+ul {
+    list-style-type: none;
+}
+
 a:hover {
     text-decoration: underline;
+}
+
+h1 a:hover {
+    text-decoration: none;
 }
 
 header {
@@ -51,6 +59,21 @@ height:80px;
 
     margin: 0px;
 }
+
+.button {
+    padding: 0px 10px 5px 10px;
+    background-color: white;
+    border: 1px solid #eee;
+}
+
+.white {
+    color: #fff;
+}
+
+.button:hover {
+    background-color: #CFCACC;
+}
+
 header #shopping-cart {
     position:absolute;
     top: 10px;
@@ -91,6 +114,8 @@ nav ul li a {
     cursor:pointer;
 }
 
+
+
 #shopping-links {
     width: 70%;
     margin-left: auto;
@@ -98,7 +123,7 @@ nav ul li a {
 }
 
 #shopping-links ul li img {
-    max-width: 160px;
+    max-width: 140px;
     max-height: 160px;
 }
 
@@ -109,6 +134,7 @@ nav ul li a {
 #shopping-links ul li {
     display: inline-block;
     text-align: center;
+    margin-right: 20px;
 }
 
 #category-products {
@@ -159,6 +185,77 @@ nav ul li a {
     max-width: 200px;
     max-height: 200px;
     margin-right: 5px;
+}
+
+#shopping-cart-section {
+    display: inline-block;
+    vertical-align: top;
+    width: 70%;
+}
+
+#shopping-cart-section h2 {
+    text-align: left;
+    margin-left: 40px;
+}
+
+#shopping-cart-section img {
+    max-width: 15%;
+    max-height: 170px;
+    margin-right: 15px;
+}
+
+#shopping-cart-section div, #shopping-cart-list p, #shopping-cart-list select {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#shopping-cart-section ul li {
+    height: 160px;
+    border-top: 1px solid #666;
+    padding: 20px 0 20px;
+    position: relative;
+}
+
+#shopping-cart-section ul li:last-child {
+    border-bottom: 1px solid #666;
+}
+
+#shopping-cart-section select {
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 10%;
+}
+
+#shopping-cart-section p {
+    height: 31px;
+    font-size: 18px;
+    width: 25%;
+    text-align: right;
+}
+
+.shopping-cart-details {
+    text-align: left;
+    width: 40%;
+}
+
+.shopping-cart-details h3 {
+    margin-bottom: 40px;
+}
+
+.checkout {
+    display: inline-block;
+    vertical-align: top;
+    width: 14%;
+    border: solid 1px #eee;
+    margin-top: 40px;
+    margin-left: 5%;
+    padding: 10px;
+    text-align: right;
+    position: fixed;
+}
+
+.checkout h3 {
+    margin-top: 10px;
 }
 
 footer {

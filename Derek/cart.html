@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Seahawks Merch</title>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Amatic+SC' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="jquery.js"></script>
+    <script src="cookies.js"></script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+            <h1 class="centerblock"><a href="index.html" class="white">We are 12</a></h1>
+            <div id="shopping-cart">
+                <input type="text" />
+                <a href="cart.html" class="button">shopping cart</a>
+            </div>
+    </header>
+	<nav>
+	<ul id="menu">
+
+	</ul>
+	</nav>
+    <section id="shopping-cart-section">
+        <h2>Shopping Cart</h2>
+        <ul id="shopping-cart-list">
+<!--             <li>
+                <img alt="Men's sports jersey" src="http://fromanativeson.com/wp-content/uploads/2014/01/Seahawks-helmet.png"/>
+                <div class="shopping-cart-details">
+                    <h3>Sports Jersey in Men's</h3>
+                    <a href="#" class="button">Remove</a>
+                </div>
+                <p class="price">$24.99</p>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+            </li>
+            <li>
+                <img alt="Men's sports jersey" src="http://profootballzone.com/wp-content/uploads/2014/03/russell-wilson2.png"/>
+                <div class="shopping-cart-details">
+                    <h3>Sports Jersey in Men's</h3>
+                    <a href="#" class="button">Remove</a>
+                </div>
+                <p class="price">$24.99</p>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+            </li>
+            <li><img alt="Men's sports jersey" src="http://pro"/><div class="shopping-cart-details">
+            <h3>Sports Jersey in Men's</h3><a href="#" class="button" onclick="shoppingCartRemove('Mens', 'sports jersey'">Remove</a>
+                </div>
+                <p class="price">$24.99</p>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+            </li> -->
+        </ul>
+    </section>
+    <div class="checkout">
+        <h3>Proceed to checkout</h3>
+        <a href="#paypal" class="button">Checkout</a>
+    </div>
+
+	<footer class="centerblock">
+        <p>content needed here!</p>
+	</footer>
+</body>
+<script>
+$(document).ready(function(){
+
+    var categories = getCategories();
+    displayMenu(categories);
+
+    // var shoppingCart = getShoppingCart();
+    // console.log(shoppingCart[0].product);
+
+    displayShoppingCart();
+    // localStorage.setItem('s', 'blah2');
+    // var item = localStorage.getItem('s');
+    // console.log(item);
+})
+
+
+</script>
+</html>
