@@ -172,6 +172,9 @@ footer {
   display: block;
 }
 
+.form-errors {
+  color: red;
+}
 
 
 
