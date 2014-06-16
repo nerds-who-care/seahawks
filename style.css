@@ -37,45 +37,52 @@ header {
   color: white;
 }
 
-.centerblock {
+.title {
   position: relative;
   display: block;
   text-align: center;
   margin: 0px;
 }
 
-header #shopping-cart {
+.menu {
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.menu a {
+  color: white;
+  cursor: pointer;
+}
+
+.user-menu {
   position: absolute;
-  top: 10px;
+  top: 5px;
   right: 10px;
 }
 
-nav{
+.user-menu li + li {
+  border-left: 1px solid white;
+  padding-left: 12px;
+}
+
+.categories-menu {
   display: block;
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
   background-color: black;
   height: 30px;
   text-align: center;
 }
 
-nav ul {
+.categories-menu ul.menu {
   padding-top: 7px;
   margin-top: 0px;
-}
-
-nav ul li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-nav ul li a {
-  color: white;
-  cursor: pointer;
 }
 
 #shopping-links {

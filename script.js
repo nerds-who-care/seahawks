@@ -21,7 +21,6 @@ function jsonFlickrFeed(data) {
   $.each( data.items, function(key, value) {
     var image = value.media.m;
     var tag = value.tags;
-
     htmlBlob += '<img title="' + tag + '" src="' + image + '"/>';
   });
 
