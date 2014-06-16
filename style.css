@@ -158,6 +158,11 @@ footer {
   margin-bottom: 40px;
 }
 
+.main-content {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
 .form-group {
   margin-bottom: 10px;
 }
