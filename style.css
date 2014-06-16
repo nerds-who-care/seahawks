@@ -11,13 +11,8 @@ body {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .title {
   font-family: 'Amatic SC', cursive;
-}
-
-h1 {
-  font-size: 48px;
-  line-height: 80px
 }
 
 a {
@@ -42,6 +37,8 @@ header {
   display: block;
   text-align: center;
   margin: 0px;
+  font-size: 48px;
+  line-height: 80px
 }
 
 .menu {
@@ -161,6 +158,14 @@ footer {
   margin-bottom: 40px;
 }
 
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+  display: block;
+}
 
 
 

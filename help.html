@@ -10,7 +10,7 @@
 </head>
 <body>
   <header>
-    <h1 class="title">We are 12</h1>
+    <div class="title">We are 12</div>
     <nav class="user-menu">
       <ul class="menu">
         <li><a href="help.html">Help</a></li>
@@ -24,9 +24,23 @@
     <ul id="menu" class="menu"></ul>
   </nav>
 
-  <section id="shopping-links"></section>
+  <h1>Contact Us</h1>
 
-  <div id="category-products"></div>
+  <form id="contact-form" action="#" method="POST">
+    <div class="form-group">
+      <label for="name">Your name:</label>
+      <input type="text" name="name"/>
+    </div>
+    <div class="form-group">
+      <label for="email">Your email:</label>
+      <input type="text" name="email"></form>
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea name="message"></textarea>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
 
   <footer>
     <div class="centerblock">
