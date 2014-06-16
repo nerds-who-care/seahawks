@@ -28,7 +28,7 @@ function jsonFlickrFeed(data)
         //console.log('tag: ' + tag);
         htmlBlob += '<img title="' + tag + '"src="' + image + '"/>';
     });
-    
+
     $('#fans').html(htmlBlob);
 }
 
@@ -119,7 +119,7 @@ function displayMenu(categories){
 //     $('#category-products').html(myHtml + closex);
 //     $('#category-products').css("display","block");
 //     $('#close-products').on("click", function() { $('#category-products').css("display","none");});
-//     // if you take away the comments here you will get the full size image 
+//     // if you take away the comments here you will get the full size image
 //     // when you mouse over the image in the products list
 //     // $('.productimg').on("mouseover", function() { this.style.width = 'auto'; });
 //     // $('.productimg').on("mouseout", function() { this.style.width = '80px'; });
@@ -176,7 +176,7 @@ function initShoppingCart() {
 
     setShoppingCart(shoppingCart);
 
-    //commit the shopping cart to HTML 5's localStorage 
+    //commit the shopping cart to HTML 5's localStorage
     //was done with cookies in the old days
     //localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
 }
@@ -194,7 +194,7 @@ function getShoppingCart(){
 }
 
 function setShoppingCart(cart){
-    //commit the shopping cart to HTML 5's localStorage 
+    //commit the shopping cart to HTML 5's localStorage
     //was done with cookies in the old days
     //localStorage cannot hold anything other than strings.  So we have to stringify
     localStorage.setItem('shoppingCart', JSON.stringify(cart));
@@ -246,8 +246,17 @@ function shoppingCartRemove(category, name){
     console.log('removing category:' + category + ' and item: ' + name);
 }
 
-
-
+$(document).ready(function(){
+    var categories = getCategories();
+    displayMenu(categories);
+    flickrSearch('seahawks fans');
+    var requestedCategory = getURLParametersByKey('category');
+    if (requestedCategory == null || requestedCategory == '') {
+       displayShoppingLinks();
+    } else {
+        displayProductsByCategory(requestedCategory);
+    }
+});
 
 
 

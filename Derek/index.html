@@ -37,35 +37,5 @@
 		</div>
 	</footer>
 </body>
-<script>
-$(document).ready(function(){
-    
-
-
-
-    var categories = getCategories();
-    displayMenu(categories);
-    flickrSearch('seahawks fans');
-    var requestedCategory = getURLParametersByKey('category');
-    if (requestedCategory == null || requestedCategory == '')
-    {
-       displayShoppingLinks();
-    }
-    else
-    {
-        displayProductsByCategory(requestedCategory);
-    }
-    
-
-    //var shoppingCart = getShoppingCart();
-    //console.log(shoppingCart[0].name);
-
-    // localStorage.setItem('s', 'blah2');
-    // var item = localStorage.getItem('s');
-    // console.log(item);
-})
-
-
-</script>
 </html>
 
