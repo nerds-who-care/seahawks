@@ -7,10 +7,11 @@
   <script src="jquery.js"></script>
   <script src="data.js"></script>
   <script src="script.js"></script>
+  <script src="contact-form.js"></script>
 </head>
 <body>
   <header>
-    <h1 class="title">We are 12</h1>
+    <div class="title">We are 12</div>
     <nav class="user-menu">
       <ul class="menu">
         <li><a href="help.html">Help</a></li>
@@ -25,10 +26,23 @@
   </nav>
 
   <section class="main-content">
+    <h1>Contact Us</h1>
 
-    <section id="shopping-links"></section>
-
-    <div id="category-products"></div>
+    <form id="contact-form" action="#" method="POST">
+      <div class="form-group">
+        <label for="name">Your name:</label>
+        <input type="text" name="name"></input>
+      </div>
+      <div class="form-group">
+        <label for="email">Your email:</label>
+        <input type="text" name="email"></input>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea name="message"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
 
     <footer>
       <div class="centerblock">
@@ -36,12 +50,11 @@
         <div id="fans"></div>
       </div>
     </footer>
+
   </section>
+
 </body>
 </html>
-
-
-
 
 
 
