@@ -129,6 +129,23 @@ header {
   margin-bottom: 10px;
 }
 
+#category-products .productqty {
+    width:50px;
+    font-family: 'Josefin Sans', sans-serif;
+    border: 2px solid #2E3751;
+    border-radius: 3px;
+    text-align:right;
+    padding-right:5px;
+}
+#category-products .productbtn {
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 3px;
+    background-color:#2E3751;
+    border:none;
+    color:#ffffff;
+    font-weight:bold;
+}
+
 .closex {
   position: absolute;
   top: 5px;
