@@ -11,7 +11,7 @@
     $(document).ready(function(){
       var categories = getCategories();
       displayMenu(categories);
-      displayShoppingLinks();
+      //displayShoppingLinks();
 
       flickrSearch('seahawks fans');
     });
@@ -35,7 +35,18 @@
 
   <section class="main-content">
 
-    <section id="shopping-links"></section>
+    <section id="shopping-links">
+        <ul>
+          <li><img src="#"/><h3>Product Name<br/>$24.99</h3><a href="javascript:addToShopping();" class="button">Add to Cart</a></li>
+          <li><img src="#"/><h3>Product Name<br/>$24.99</h3><a href="javascript:addToShopping();" class="button">Add to Cart</a></li>
+          <li><img src="#"/><h3>Product Name<br/>$24.99</h3><a href="javascript:addToShopping();" class="button">Add to Cart</a></li>
+          <li><img src="#"/><h3>Product Name<br/>$24.99</h3><a href="javascript:addToShopping();" class="button">Add to Cart</a></li>
+          <li><img src="#"/><h3>Product Name<br/>$24.99</h3><a href="javascript:addToShopping();" class="button">Add to Cart</a></li>
+          <li><img src="#"/><h3>Product Name<br/>$24.99</h3><a href="javascript:addToShopping();" class="button">Add to Cart</a></li>
+          <li><img src="#"/><h3>Product Name<br/>$24.99</h3><a href="javascript:addToShopping();" class="button">Add to Cart</a></li>
+          
+        </ul>
+    </section>
 
     <div id="category-products"></div>
 

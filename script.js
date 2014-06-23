@@ -1,3 +1,23 @@
+
+function getURLParameters() {
+  if (location.search) {
+    var parts = location.search.substring(1).split('&');
+    var params = {};
+    for (var i = 0; i < parts.length; i++) {
+      var nv = parts[i].split('=');
+      if (!nv[0]) continue;
+      params[nv[0]] = nv[1] || true;
+    }
+    return params;
+  }
+}
+
+function getURLParametersByKey(key) {
+  var params = getURLParameters();
+  if (params != undefined)
+    return decodeURI(params[key]);
+}
+
 function ajaxGet(url, callback) {
   $.ajax({
     type: 'GET',
@@ -144,7 +164,15 @@ function displayShoppingCart() {
    $('#shoppingCart').html(myHtml);
 }
 
-
+$(document).ready(function(){
+  var requestedCategory = getURLParametersByKey('category');
+  if (requestedCategory == null || requestedCategory == ''){
+    //displayShoppingLinks();
+  }
+  else {
+    //displayProductsByCategory(requestedCategory);
+  }
+})
 
 
 
