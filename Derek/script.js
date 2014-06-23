@@ -17,36 +17,33 @@ function getURLParametersByKey(key) {
         return decodeURI(params[key]);
 }
 
-function jsonFlickrFeed(data)
-{
-    var htmlBlob = "";
-
-    $.each( data.items, function (index, value) {
-        var image = value.media.m;
-        var tag = value.tags;
-        //console.log('image: ' + image);
-        //console.log('tag: ' + tag);
-        htmlBlob += '<img title="' + tag + '"src="' + image + '"/>';
-    });
-
-    $('#fans').html(htmlBlob);
-}
-
-function ajaxGet(url)
-{
-    $.ajax({
-        type: 'GET',
-        url: url,
-        contentType: 'application/json',
-        dataType: 'jsonp',
-        jsonp: 'jsonFlickrFeed',
+function ajaxGet(url, callback) {
+  $.ajax({
+    type: 'GET',
+    url: url,
+    contentType: 'application/json',
+    dataType: 'jsonp',
+    jsonp: callback
     });
 }
 
-function flickrSearch(searchTerm)
-{
-    var url = "http://api.flickr.com/services/feeds/photos_public.gne?tagmode=any&format=json&tags=" + searchTerm;
-    ajaxGet(url);
+function flickrSearch(searchTerm) {
+  var url = "http://api.flickr.com/services/feeds/photos_public.gne?tagmode=any&format=json&tags=" + searchTerm;
+  ajaxGet(url, "jsonFlickrFeed");
+}
+
+function jsonFlickrFeed(data) {
+  var htmlBlob = "";
+
+  console.log(data);
+
+  $.each( data.items, function(key, value) {
+    var image = value.media.m;
+    var tag = value.tags;
+    htmlBlob += '<img title="' + tag + '" src="' + image + '"/>';
+  });
+
+  $("#fans").html(htmlBlob);
 }
 
 function getCategoriesAndProducts(){
@@ -61,8 +58,8 @@ function getCategoriesAndProducts(){
         	console.log('-- name: ' + name);
         	console.log('-- price: ' + price);
         	console.log('-- image: ' + image);
-        })
-    })
+    });
+  });
 }
 
 function getCategories(){
@@ -70,14 +67,12 @@ function getCategories(){
     $.each(inventory, function(key, value){
         var category = value.category;
         var products = value.products;
-        //console.log('category: ' + category);
         categories.push(category);
-    })
+  });
     return categories;
 }
 
 function displayShoppingLinks(){
-    //var template = '<li><a href="javascript:displayProducts({key});"><img src="{image_path}" /></a><h3><a href="javascript:displayProducts({key});">Shop {category}</a></h3></li>';
     var template = '<li><a href="javascript:displayProducts({key});"><img src="{image_path}" /></a><h3><a href="index.html?category={category}">Shop {category}</a></h3></li>';
     var myHtml = '<ul>';
     $.each(inventory, function(key, value){
@@ -92,7 +87,6 @@ function displayShoppingLinks(){
     myHtml += "</ul>";
     $('#shopping-links').html(myHtml);
 }
-
 
 function displayMenu(categories){
 	var template = '<li><a id="menu_{category}" href="index.html?category={category}">{category}</a></li>';
@@ -165,22 +159,6 @@ function getProduct(targetCategory, targetName){
     return returnValue;
 }
 
-function initShoppingCart() {
-    //TODO: Make sure this only sets on first load.  i.e. don't overwrite local storage
-
-
-    //create empty shopping cart object
-    var shoppingCart = [];
-
-    //shoppingCart.push({'product': 'hat'});
-
-    setShoppingCart(shoppingCart);
-
-    //commit the shopping cart to HTML 5's localStorage
-    //was done with cookies in the old days
-    //localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
-}
-
 function getShoppingCart(){
     var cart = localStorage.getItem('shoppingCart');
     if (cart != undefined){
@@ -194,9 +172,6 @@ function getShoppingCart(){
 }
 
 function setShoppingCart(cart){
-    //commit the shopping cart to HTML 5's localStorage
-    //was done with cookies in the old days
-    //localStorage cannot hold anything other than strings.  So we have to stringify
     localStorage.setItem('shoppingCart', JSON.stringify(cart));
 }
 
@@ -211,7 +186,6 @@ function displayShoppingCart(){
         temp = temp.replace(/{price}/g, value.price.toFixed(2));
         myHtml += temp;
     })
-
 
     $('#shopping-cart-list').html(myHtml);
 }

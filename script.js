@@ -48,28 +48,26 @@ function getCategories(){
   $.each(inventory, function(key, value){
     var category = value.category;
     var products = value.products;
-    console.log('category: ' + category);
     categories.push(category);
   });
   return categories;
 }
 
 function displayShoppingLinks(){
-  var template = '<li><a href="javascript:displayProducts({key});"><img src="{image_path}" /></a><h3><a href="javascript:displayProducts({key});">Shop {category}</a></h3></li>';
-  var myHtml = '<ul>';
-  $.each(inventory, function(key, value){
-    var category = value.category;
-    var image_path = value.top_level_image;
-    var product_list = value.products;
-    var temp = template.replace(/{category}/g, category);
-    temp = temp.replace(/{image_path}/g, image_path);
-    temp = temp.replace(/{key}/g, key);
-    myHtml += temp;
-  });
-  myHtml += "</ul>";
-  $('#shopping-links').html(myHtml);
+    var template = '<li><a href="javascript:displayProducts({key});"><img src="{image_path}" /></a><h3><a href="index.html?category={category}">Shop {category}</a></h3></li>';
+    var myHtml = '<ul>';
+    $.each(inventory, function(key, value){
+        var category = value.category;
+        var image_path = value.top_level_image;
+        var product_list = value.products;
+        var temp = template.replace(/{category}/g, category);
+        temp = temp.replace(/{image_path}/g, image_path);
+        temp = temp.replace(/{key}/g, key);
+        myHtml += temp;
+    });
+    myHtml += "</ul>";
+    $('#shopping-links').html(myHtml);
 }
-
 
 function displayMenu(categories){
   var template = '<li><a id="menu_{category}" href="#">{category}</a></li>';
