@@ -98,45 +98,45 @@ function displayMenu(categories){
   $('#menu').html(myHtml);
 }
 
-function displayProducts(key){
-  var category = inventory[key];
-  var template = '<div>'+
-        '<img class="productimg" src="{imagePath}"> '+
-        '{name} '+
-        '${price} '+
-        '<input type="text" class="productqty" id="qty_{productid}" /> '+
-        '<button class="productbtn" id="{productid}">Add</button>'+
-    '</div>';
-  var myHtml = '';
-  $.each(category.products, function(key, value) {
-    var temp = template.replace(/{imagePath}/g, value.image);
-    temp = temp.replace(/{name}/g, value.name);
-    temp = temp.replace(/{price}/g, value.price.toFixed(2));
-    temp = temp.replace(/{productid}/g, key);
-    myHtml += temp;
-  });
-  var closex = '<div id="close-products" class="closex">X</div>';
-  $('#category-products').html(myHtml + closex);
-  $('#category-products').css("display","block");
-  $('#close-products').on("click", function() { $('#category-products').css("display","none");});
-  $('.productbtn').on("click", function() {
-    var qty = document.getElementById("qty_" + this.id);
-    var cart = getShoppingCart();
-    var qtyval = qty.value;
-    if (isNaN(qtyval)) {
-      alert('Please enter number');
-      qty.value = "";
-      qty.focus();
-    } else {
-      cart[this.id] = qtyval;
-      setShoppingCart(cart);
-    }
-    });
-  // if you take away the comments here you will get the full size image
-  // when you mouse over the image in the products list
-  // $('.productimg').on("mouseover", function() { this.style.width = 'auto'; });
-  // $('.productimg').on("mouseout", function() { this.style.width = '80px'; });
-}
+// function displayProducts(key){
+//   var category = inventory[key];
+//   var template = '<div>'+
+//         '<img class="productimg" src="{imagePath}"> '+
+//         '{name} '+
+//         '${price} '+
+//         '<input type="text" class="productqty" id="qty_{productid}" /> '+
+//         '<button class="productbtn" id="{productid}">Add</button>'+
+//     '</div>';
+//   var myHtml = '';
+//   $.each(category.products, function(key, value) {
+//     var temp = template.replace(/{imagePath}/g, value.image);
+//     temp = temp.replace(/{name}/g, value.name);
+//     temp = temp.replace(/{price}/g, value.price.toFixed(2));
+//     temp = temp.replace(/{productid}/g, key);
+//     myHtml += temp;
+//   });
+//   var closex = '<div id="close-products" class="closex">X</div>';
+//   $('#category-products').html(myHtml + closex);
+//   $('#category-products').css("display","block");
+//   $('#close-products').on("click", function() { $('#category-products').css("display","none");});
+//   $('.productbtn').on("click", function() {
+//     var qty = document.getElementById("qty_" + this.id);
+//     var cart = getShoppingCart();
+//     var qtyval = qty.value;
+//     if (isNaN(qtyval)) {
+//       alert('Please enter number');
+//       qty.value = "";
+//       qty.focus();
+//     } else {
+//       cart[this.id] = qtyval;
+//       setShoppingCart(cart);
+//     }
+//     });
+//   // if you take away the comments here you will get the full size image
+//   // when you mouse over the image in the products list
+//   // $('.productimg').on("mouseover", function() { this.style.width = 'auto'; });
+//   // $('.productimg').on("mouseout", function() { this.style.width = '80px'; });
+// }
 
 function getShoppingCart() {
     var cart = window.localStorage.getItem('shoppingCart');
@@ -164,13 +164,33 @@ function displayShoppingCart() {
    $('#shoppingCart').html(myHtml);
 }
 
+function displayProduct(key){
+  var template = '<li><img src="{imagePath}"/><h3>{name}<br/>${price}</h3><a href="#" onclick="addToShoppingCart()" class="button">Add to Cart</a></li>';
+
+  var category = inventory[key];
+  var myHtml = "<ul>";
+  $.each(category.products, function(index, value){
+    
+  });
+}
+
+function displayProductsByCategory(category){
+  //find product within inventory
+  $.each(inventory, function(key, value){
+    if (value.category == category)
+    {
+      displayProducts(key);
+    }
+  })
+}
+
 $(document).ready(function(){
   var requestedCategory = getURLParametersByKey('category');
   if (requestedCategory == null || requestedCategory == ''){
     //displayShoppingLinks();
   }
   else {
-    //displayProductsByCategory(requestedCategory);
+    displayProductsByCategory(requestedCategory);
   }
 })
 

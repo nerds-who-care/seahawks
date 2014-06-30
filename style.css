@@ -96,11 +96,14 @@ header {
 
 #shopping-links ul {
   list-style-type: none;
+  margin-top: 18px;
 }
 
 #shopping-links ul li {
   display: inline-block;
   text-align: center;
+  margin-right: 12px;
+  margin-bottom: 23px;
 }
 
 #category-products {
@@ -191,6 +194,12 @@ footer {
 
 .form-errors {
   color: red;
+}
+
+.button {
+  padding: 4px 7px 10px 7px;
+  background-color: #eee;
+  border: 1px solid gray;
 }
 
 
