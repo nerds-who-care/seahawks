@@ -170,7 +170,7 @@ function displayProduct(key){
   var category = inventory[key];
   var myHtml = "<ul>";
   $.each(category.products, function(index, value){
-    
+
   });
 }
 
