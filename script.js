@@ -90,7 +90,7 @@ function displayShoppingLinks(){
 }
 
 function displayMenu(categories){
-  var template = '<li><a id="menu_{category}" href="#">{category}</a></li>';
+  var template = '<li><a id="menu_{category}" href="index.html?category={category}">{category}</a></li>';
   var myHtml = '';
   $.each(categories, function(key, value){
     myHtml += template.replace(/{category}/g, value);
@@ -164,14 +164,19 @@ function displayShoppingCart() {
    $('#shoppingCart').html(myHtml);
 }
 
-function displayProduct(key){
+function displayProducts(key){
   var template = '<li><img src="{imagePath}"/><h3>{name}<br/>${price}</h3><a href="#" onclick="addToShoppingCart()" class="button">Add to Cart</a></li>';
 
   var category = inventory[key];
   var myHtml = "<ul>";
   $.each(category.products, function(index, value){
-
+    var temp = template.replace(/{imagePath}/g, value.image);
+    temp = temp.replace(/{name}/g, value.name);
+    temp = temp.replace(/{price}/g, value.price);
+    myHtml += temp;
   });
+  myHtml += "</ul>";
+  $('#shopping-links').html(myHtml);
 }
 
 function displayProductsByCategory(category){
@@ -185,9 +190,11 @@ function displayProductsByCategory(category){
 }
 
 $(document).ready(function(){
+  var categories = getCategories();
+  displayMenu(categories);
   var requestedCategory = getURLParametersByKey('category');
   if (requestedCategory == null || requestedCategory == ''){
-    //displayShoppingLinks();
+    displayShoppingLinks();
   }
   else {
     displayProductsByCategory(requestedCategory);

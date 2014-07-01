@@ -38,7 +38,13 @@ header {
   text-align: center;
   margin: 0px;
   font-size: 48px;
-  line-height: 80px
+  line-height: 80px;
+  font-weight: bold;
+}
+
+.title a {
+  color: white;
+  text-decoration: none;
 }
 
 .menu {
