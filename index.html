@@ -1,65 +1,44 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
   <title>Seahawks Merch</title>
-  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Amatic+SC' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Amatic+SC' rel='stylesheet' type='text/css' />
   <link rel="stylesheet" type="text/css" href="style.css" />
   <script src="jquery.js"></script>
+  <script src="cookies.js"></script>
   <script src="data.js"></script>
   <script src="script.js"></script>
-  <script>
-    $(document).ready(function(){
-      //var categories = getCategories();
-      //displayMenu(categories);
-      //displayShoppingLinks();
-
-      flickrSearch('seahawks fans');
-    });
-    </script>
 </head>
 <body>
   <header>
-    <h1 class="title"><a href="index.html">We are 12</a></h1>
+    <h1 class="centerblock"><a href="index.html" class="white">We are 12</a></h1>
     <nav class="user-menu">
       <ul class="menu">
         <li><a href="help.html">Help</a></li>
-        <li><a href="#">Account</a></li>
+        <!-- <li><a href="#">Account</a></li> -->
         <li><a href="cart.html">Shopping Cart</a></li>
       </ul>
     </nav>
   </header>
-
   <nav class="categories-menu">
-    <ul id="menu" class="menu"></ul>
+    <ul id="menu">
+    </ul>
   </nav>
 
-  <section class="main-content">
-
-    <section id="shopping-links">
-        <!--<ul>
-          <li><img src="http://profootballzone.com/wp-content/uploads/2014/03/russell-wilson2.png"/><h3>Product Name<br/>$24.99</h3><a href="javascript:addToShopping();" class="button">Add to Cart</a></li>
-          <li><img src="http://www.seattleseahawksjerseys.com/wp-content/uploads/2013/08/206088-seattle-seahawks.jpg"/><h3>Product Name<br/>$24.99</h3><a href="javascript:addToShopping();" class="button">Add to Cart</a></li>
-          <li><img src="http://profootballzone.com/wp-content/uploads/2014/03/russell-wilson2.png"/><h3>Product Name<br/>$24.99</h3><a href="javascript:addToShopping();" class="button">Add to Cart</a></li>
-          <li><img src="http://www.seattleseahawksjerseys.com/wp-content/uploads/2013/08/206088-seattle-seahawks.jpg"/><h3>Product Name<br/>$24.99</h3><a href="javascript:addToShopping();" class="button">Add to Cart</a></li>
-          <li><img src="http://profootballzone.com/wp-content/uploads/2014/03/russell-wilson2.png"/><h3>Product Name<br/>$24.99</h3><a href="javascript:addToShopping();" class="button">Add to Cart</a></li>
-          <li><img src="http://www.seattleseahawksjerseys.com/wp-content/uploads/2013/08/206088-seattle-seahawks.jpg"/><h3>Product Name<br/>$24.99</h3><a href="javascript:addToShopping();" class="button">Add to Cart</a></li>
-        </ul>-->
-    </section>
-
-    <div id="category-products"></div>
-
-    <footer>
-      <div class="centerblock">
-        <h2>Check out our fans!</h2>
-        <div id="fans"></div>
-      </div>
-    </footer>
+  <section id="shopping-links">
   </section>
+
+  <div id="category-products">
+  </div>
+
+  <footer>
+    <div class="centerblock">
+      <h2>Check out our fans!</h2>
+      <div id="fans"></div>
+    </div>
+  </footer>
 </body>
 </html>
-
-
-
 
 
 

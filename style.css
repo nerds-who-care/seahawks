@@ -2,212 +2,291 @@
 /*https://raw.githubusercontent.com/nerds-who-care/seahawks/master/images/12th-man.jpg*/
 
 html {
-  position: relative;
+    position:relative;
 }
 
 body {
-  margin: 0px;
-  position: relative;
-  font-family: 'Josefin Sans', sans-serif;
+    margin:0px;
+    position:relative;
+    font-family: 'Josefin Sans', sans-serif;
+    /*font-family: Calibri, Arial;*/
 }
 
-h1, h2, h3, h4, h5, h6, .title {
-  font-family: 'Amatic SC', cursive;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Amatic SC', cursive;
+}
+
+h1 {
+    font-size: 59px;
+    line-height: 70px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 22px;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
+}
+
+h1 a:hover {
+    text-decoration: none;
 }
 
 header {
-  position: relative;
-  background-image: url(https://raw.githubusercontent.com/nerds-who-care/seahawks/master/images/12th-man.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 80px;
-  color: white;
+position:relative;
+background-image: url(https://raw.githubusercontent.com/nerds-who-care/seahawks/master/images/12th-man.jpg);
+background-repeat: no-repeat;
+background-size:cover;
+height:80px;
+}
+.centerblock {
+    position:relative;
+    display: block;
+    text-align:center;
+
+    margin: 0px;
 }
 
-.title {
-  position: relative;
-  display: block;
-  text-align: center;
-  margin: 0px;
-  font-size: 48px;
-  line-height: 80px;
-  font-weight: bold;
-}
-
-.title a {
-  color: white;
-  text-decoration: none;
-}
-
-.menu {
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.menu a {
-  color: white;
-  cursor: pointer;
-}
-
-.user-menu {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  font-size: 14px;
-}
-
-.user-menu li + li {
-  border-left: 1px solid white;
-  padding-left: 12px;
-}
-
-.categories-menu {
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background-color: black;
-  height: 30px;
-  text-align: center;
-}
-
-.categories-menu ul.menu {
-  padding-top: 7px;
-  margin-top: 0px;
-}
-
-#shopping-links {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#shopping-links ul li img {
-  max-width: 160px;
-  max-height: 160px;
-}
-
-#shopping-links ul {
-  list-style-type: none;
-  margin-top: 18px;
-}
-
-#shopping-links ul li {
-  display: inline-block;
-  text-align: center;
-  margin-right: 12px;
-  margin-bottom: 23px;
-}
-
-#category-products {
-  display: none;
-  position: fixed;
-  margin: 20% 30%;
-  background-color: #fff;
-  border: solid 5px #2E3751;
-  border-radius: 10px;
-  min-height: 200px;
-  min-width: 200px;
-  padding: 25px;
-  padding-bottom: 15px;
-  top: 0px;
-  z-index: 10;
-}
-
-#category-products div {
-  white-space: nowrap;
-}
-
-#category-products .productimg {
-  width: 80px;
-  vertical-align:middle;
-  margin-right: 15px;
-  margin-bottom: 10px;
-}
-
-#category-products .productqty {
-    width:50px;
-    font-family: 'Josefin Sans', sans-serif;
-    border: 2px solid #2E3751;
-    border-radius: 3px;
-    text-align:right;
-    padding-right:5px;
-}
-#category-products .productbtn {
-    font-family: 'Josefin Sans', sans-serif;
-    border-radius: 3px;
-    background-color:#2E3751;
-    border:none;
-    color:#ffffff;
-    font-weight:bold;
-}
-
-.closex {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  border: solid 2px #2E3751;
-  border-radius: 5px;
-  padding: 3px;
-  font-family: Verdana;
-  cursor: pointer;
-  font-size: 10px;
-  font-weight: bold;
-}
-
-#fans {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#fans img {
-  max-width: 200px;
-  max-height: 200px;
-  margin-right: 5px;
-}
-
-footer {
-  margin-bottom: 40px;
-}
-
-.main-content {
-  padding-left: 100px;
-  padding-right: 100px;
+.centered-form {
+    margin-left: 40%;
 }
 
 .form-group {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
-.form-group input,
-.form-group textarea {
-  display: block;
+.form-group label {
+    width: 100px;
+    display: inline-block;
 }
 
 .form-errors {
-  color: red;
+    color: red;
 }
 
 .button {
-  padding: 4px 7px 10px 7px;
-  background-color: #eee;
-  border: 1px solid gray;
+    padding: 0px 10px 5px 10px;
+    background-color: white;
+    border: 1px solid #eee;
 }
 
+.white {
+    color: #fff;
+}
 
+.button:hover {
+    background-color: #CFCACC;
+}
 
+header #shopping-cart {
+    position:absolute;
+    top: 10px;
+    right:10px;
+}
 
+nav{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+nav{
+	display: block;
+}
+
+nav {
+    background-color: black;
+    height: 30px;
+    text-align: center;
+}
+
+nav ul {
+    padding-top: 7px;
+    margin-top: 0px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+
+}
+
+nav ul li a {
+    color: white;
+    cursor:pointer;
+}
+
+.categories-menu {
+    padding-bottom: 14px;
+}
+
+.user-menu {
+    position: absolute;
+    background-color: inherit;
+    top: 0px;
+    right: 10px;
+}
+
+#shopping-links {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#shopping-links ul li img {
+    max-width: 140px;
+    max-height: 160px;
+}
+
+#shopping-links ul{
+    list-style-type: none;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#shopping-links ul li {
+    display: inline-block;
+    text-align: center;
+    margin-right: 20px;
+}
+
+#category-products {
+    display: none;
+    position: fixed;
+    margin: 20% 30%;
+    background-color: #fff;
+    border: solid 5px #2E3751;
+    border-radius: 10px;
+    min-height: 200px;
+    min-width: 200px;
+    padding: 25px;
+    padding-bottom:15px;
+    top: 0px;
+}
+
+#category-products div {
+    white-space:nowrap;
+}
+
+#category-products .productimg {
+    width:80px;
+    vertical-align:middle;
+    margin-right:15px;
+    margin-bottom:10px;
+}
+
+.closex {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: solid 2px #2E3751;
+    border-radius: 5px;
+    padding: 3px;
+    font-family: Verdana;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+#fans {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#fans img {
+    max-width: 200px;
+    max-height: 200px;
+    margin-right: 5px;
+}
+
+#shopping-cart-section {
+    display: inline-block;
+    vertical-align: top;
+    width: 70%;
+}
+
+#shopping-cart-section h2 {
+    text-align: left;
+    margin-left: 40px;
+}
+
+#shopping-cart-section img {
+    max-width: 15%;
+    max-height: 170px;
+    margin-right: 15px;
+}
+
+#shopping-cart-section div, #shopping-cart-list p, #shopping-cart-list select {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#shopping-cart-section ul li {
+    height: 160px;
+    border-top: 1px solid #666;
+    padding: 20px 0 20px;
+    position: relative;
+}
+
+#shopping-cart-section ul li:last-child {
+    border-bottom: 1px solid #666;
+}
+
+#shopping-cart-section select {
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 10%;
+}
+
+#shopping-cart-section p {
+    height: 31px;
+    font-size: 18px;
+    width: 25%;
+    text-align: right;
+}
+
+.shopping-cart-details {
+    text-align: left;
+    width: 40%;
+}
+
+.shopping-cart-details h3 {
+    margin-bottom: 40px;
+}
+
+.checkout {
+    display: inline-block;
+    vertical-align: top;
+    width: 14%;
+    border: solid 1px #eee;
+    margin-top: 40px;
+    margin-left: 5%;
+    padding: 10px;
+    text-align: right;
+    position: fixed;
+}
+
+.checkout h3 {
+    margin-top: 10px;
+}
+
+footer {
+    margin-bottom: 40px;
+    margin-top: 60px;
+}

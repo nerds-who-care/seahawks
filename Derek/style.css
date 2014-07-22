@@ -114,7 +114,12 @@ nav ul li a {
     cursor:pointer;
 }
 
-
+.user-menu {
+    position: absolute;
+    background-color: inherit;
+    top: 0px;
+    right: 10px;
+}
 
 #shopping-links {
     width: 70%;
