@@ -35,7 +35,7 @@ function flickrSearch(searchTerm) {
 function jsonFlickrFeed(data) {
   var htmlBlob = "";
 
-  console.log(data);
+  //console.log(data);
   var numImages = 12;
   var imageCount = 0;
 
@@ -182,7 +182,7 @@ function setShoppingCart(cart){
 }
 
 function displayShoppingCart(){
-    var template = '<li><img alt="{category} {name}" src="{image_path}"/><div class="shopping-cart-details"><h3>{name} in {category}</h3><a href="#" class="button" onclick="shoppingCartRemove("{category}", "{name}">Remove</a></div><p class="price">${price}</p><select><option>1</option><option>2</option></select></li>';
+    var template = '<li><img alt="{category} {name}" src="{image_path}"/><div class="shopping-cart-details"><h3>{name} in {category}</h3><a href="#" class="button" onclick="shoppingCartRemove(\'{category}\', \'{name}\')">Remove</a></div><p class="price">${price}</p><select><option>1</option><option>2</option></select></li>';
     var shoppingCart = getShoppingCart();
     var myHtml = '';
     $.each(shoppingCart, function(data, value){
@@ -223,7 +223,16 @@ function addToShoppingCart(item, category, categoryKey, quantity){
 }
 
 function shoppingCartRemove(category, name){
-    console.log('removing category:' + category + ' and item: ' + name);
+    var shoppingCart = getShoppingCart();
+    $.each(shoppingCart, function(index, value){
+        if (value != undefined && value.category == category && value.name == name)
+        {
+            //remove found item
+            shoppingCart.splice(index,1);
+            setShoppingCart(shoppingCart);
+            displayShoppingCart();
+        }
+    })
 }
 
 $(document).ready(function(){
